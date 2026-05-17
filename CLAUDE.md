@@ -7,13 +7,19 @@
 
 ---
 
-## [Substituir pelo nome da regra]
+## Commits (override do global)
 
-[Descrição concreta da regra. Cite campos, métodos, paths ou comportamentos
-específicos deste projeto. Evite princípios abstratos.]
+Projeto pessoal, sem Jira. Override do padrão global de commits:
 
-```[linguagem]
-// Exemplo de código que mostra o padrão exato.
+- Formato: `type: descrição curta em português` (sem colchetes, sem TICKET).
+- Idioma: PT-BR.
+- Types permitidos: os mesmos do global (`feat`, `fix`, `chore`, `refactor`, `docs`, `test`, `style`, `perf`, `ci`, `build`).
+- Mantido do global: sem body, sem footer, sem `Co-Authored-By`.
+
+```
+feat: estrutura inicial do template
+fix: corrige path do hook no Windows
+docs: adiciona exemplo de settings global
 ```
 
 ---

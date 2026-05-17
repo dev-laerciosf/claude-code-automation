@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{try{const cmd=((JSON.parse(d).tool_input)||{}).command||'';if(/\\bgit\\s+push\\b[^|;&]*\\b(?:origin\\s+)?(?:main|master)\\b/.test(cmd)){console.error('Bloqueado: push direto pra main/master proibido neste projeto. Abra um PR.');process.exit(2);}}catch(e){}});\""
+          }
+        ]
+      }
+    ]
+  }
+}
