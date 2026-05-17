@@ -1,0 +1,100 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": false,
+    "stripe@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": false,
+    "superpowers@superpowers-marketplace": false,
+    "commit-commands@claude-plugins-official": true,
+    "api-connector@glincker-marketplace": true,
+    "superpowers-dev@superpowers-marketplace": true,
+    "code-refactoring@claude-code-workflows": true,
+    "codebase-cleanup@claude-code-workflows": true,
+    "developer-essentials@claude-code-workflows": true,
+    "error-debugging@claude-code-workflows": true,
+    "ecc@ecc": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "fullstack-dev-skills": {
+      "source": {
+        "source": "github",
+        "repo": "jeffallan/claude-skills"
+      }
+    },
+    "glincker-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/GLINCKER/claude-code-marketplace.git"
+      }
+    },
+    "claude-subconscious": {
+      "source": {
+        "source": "github",
+        "repo": "letta-ai/claude-subconscious"
+      }
+    },
+    "claude-code-workflows": {
+      "source": {
+        "source": "github",
+        "repo": "wshobson/agents"
+      }
+    },
+    "ecc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/affaan-m/everything-claude-code.git"
+      }
+    }
+  },
+  "language": "Portuguese",
+  "effortLevel": "xhigh",
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true,
+  "autoCompactEnabled": false,
+  "mcpServers": {
+    "google-sheets": {
+      "command": "C:\\Users\\<seu-usuario>\\AppData\\Roaming\\Python\\Python314\\Scripts\\uvx.exe",
+      "args": [
+        "mcp-google-sheets@latest"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "<caminho-absoluto-para-credentials.json>"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--memory-path",
+        "C:\\Users\\<seu-usuario>\\.claude-memory"
+      ]
+    }
+  }
+}
